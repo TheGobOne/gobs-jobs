@@ -1,0 +1,47 @@
+---
+import { getTools } from '../lib/repos';
+import '../styles.css';
+const tools = await getTools();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gob's Jobs</title>
+    <meta name="description" content="Free tools and trackers made by TheGobOne." />
+  </head>
+  <body>
+    <header>
+      <h1>Gob's Jobs</h1>
+      <p>Free trackers and overlays I've built.</p>
+      <a class="twitch" id="twitch" href="https://twitch.tv/thegobone" rel="noopener">
+        <span class="dot" hidden></span><span id="twitch-label">Watch on Twitch</span>
+      </a>
+    </header>
+    <main>
+      <ul class="grid">
+        {tools.map((t) => (
+          <li class="card">
+            <h2>{t.title}</h2>
+            {t.description && <p>{t.description}</p>}
+            <div class="links">
+              {t.live && <a class="btn primary" href={t.live} rel="noopener">Open tool</a>}
+              <a class="btn" href={t.github} rel="noopener">GitHub</a>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </main>
+    <script>
+      fetch('https://decapi.me/twitch/uptime/thegobone')
+        .then((r) => r.text())
+        .then((t) => {
+          if (/offline|error|not found/i.test(t)) return;
+          document.querySelector('.dot')!.removeAttribute('hidden');
+          document.getElementById('twitch-label')!.textContent = 'LIVE now on Twitch';
+        })
+        .catch(() => {});
+    </script>
+  </body>
+</html>
