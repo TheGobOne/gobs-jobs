@@ -16,9 +16,6 @@ body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--
 header { text-align: center; padding: 3rem 1rem 1.5rem; }
 h1 { margin: 0; font-size: clamp(1.8rem, 5vw, 2.8rem); }
 header p { color: var(--muted); margin: .5rem 0 1.2rem; }
-.twitch { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem 1rem; border-radius: 999px;
-  background: var(--accent); color: var(--accent-text); text-decoration: none; font-weight: 600; }
-.dot { width: .6rem; height: .6rem; border-radius: 50%; background: var(--live); box-shadow: 0 0 8px var(--live); }
 main { max-width: 960px; margin: 0 auto; padding: 1rem; }
 .grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
 .card { background: var(--surface); border-radius: var(--radius); padding: 1.2rem; display: flex; flex-direction: column; gap: .6rem; }
@@ -27,7 +24,7 @@ main { max-width: 960px; margin: 0 auto; padding: 1rem; }
 .links { display: flex; gap: .5rem; flex-wrap: wrap; }
 .btn { padding: .4rem .9rem; border-radius: 8px; border: 1px solid var(--muted); color: var(--text); text-decoration: none; font-size: .9rem; }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
-.btn:hover, .twitch:hover { filter: brightness(1.15); }
+.btn:hover { filter: brightness(1.15); }
 h1, .card h2 { font-family: var(--font-pixel); font-weight: 400; line-height: 1.4; }
 .card h2 { font-size: .85rem; }
 h1 { font-size: clamp(1.3rem, 4.5vw, 2.2rem); color: var(--accent); }

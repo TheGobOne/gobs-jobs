@@ -18,9 +18,6 @@ const tools = await getTools();
     <header>
       <h1>Gob's Jobs</h1>
       <p>Free tools I built for myself that I think the community might use as well.</p>
-      <a class="twitch" id="twitch" href="https://twitch.tv/thegobone" rel="noopener">
-        <span class="dot" hidden></span><span id="twitch-label">Watch on Twitch</span>
-      </a>
     </header>
     <main>
       <ul class="grid">
@@ -30,22 +27,12 @@ const tools = await getTools();
             {t.description && <p>{t.description}</p>}
             <div class="links">
               {t.live && <a class="btn primary" href={t.live} target="_blank" rel="noopener">Open tool</a>}
+              {t.links.map((l) => <a class="btn primary" href={l.url} rel="noopener">{l.label}</a>)}
               <a class="btn" href={t.github} rel="noopener">GitHub</a>
-              {t.links.map((l) => <a class="btn" href={l.url} rel="noopener">{l.label}</a>)}
             </div>
           </li>
         ))}
       </ul>
     </main>
-    <script>
-      fetch('https://decapi.me/twitch/uptime/thegobone')
-        .then((r) => r.text())
-        .then((t) => {
-          if (/offline|error|not found/i.test(t)) return;
-          document.querySelector('.dot')!.removeAttribute('hidden');
-          document.getElementById('twitch-label')!.textContent = 'LIVE now on Twitch';
-        })
-        .catch(() => {});
-    </script>
   </body>
 </html>
