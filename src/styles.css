@@ -1,10 +1,10 @@
-/* Brand tokens (teal on near-black, from the stream tools). Edit here only. */
+/* Brand tokens (green from the Twitch logo on near-black). Edit here only. */
 :root {
   --bg: #0a0a0a;
   --surface: #171717;
   --text: #e6e6e6;
   --muted: #9a9a9a;
-  --accent: #2ec4b6;
+  --accent: #60be20;
   --accent-text: #0a0a0a;
   --live: #ff3b3b;
   --radius: 12px;
