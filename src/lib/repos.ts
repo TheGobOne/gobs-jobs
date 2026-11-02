@@ -8,6 +8,7 @@ export interface Tool {
   description: string;
   github: string;
   live?: string;
+  links: { label: string; url: string }[];
 }
 
 function normalizeUrl(url?: string | null): string | undefined {
@@ -36,6 +37,7 @@ export async function getTools(): Promise<Tool[]> {
         description: ov.description ?? r.description ?? '',
         github,
         live: live && live !== github ? live : undefined,
+        links: (ov.links ?? []) as { label: string; url: string }[],
       };
     })
     .sort((a, b) => a.title.localeCompare(b.title));

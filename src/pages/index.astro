@@ -31,6 +31,7 @@ const tools = await getTools();
             <div class="links">
               {t.live && <a class="btn primary" href={t.live} target="_blank" rel="noopener">Open tool</a>}
               <a class="btn" href={t.github} rel="noopener">GitHub</a>
+              {t.links.map((l) => <a class="btn" href={l.url} rel="noopener">{l.label}</a>)}
             </div>
           </li>
         ))}

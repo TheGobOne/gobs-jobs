@@ -1,9 +1,9 @@
 {
-  "_help": "Hand-written overrides keyed by repo name. description/title/live all optional. Set hidden:true to drop a repo.",
+  "_help": "Hand-written overrides keyed by repo name. description/title/live all optional. Set hidden:true to drop a repo; links adds extra buttons.",
   "gobs-jobs": { "hidden": true },
   "dwr-tracker": { "title": "DWR Tracker", "description": "Item and progress tracker for Dragon Warrior Randomizer runs." },
   "NES-Custom-Music-Tool": { "title": "NES Custom Music Tool", "description": "Build custom NES-style music in your browser." },
   "z2r-stream-overlay": { "title": "Z2R Stream Overlay", "description": "Stream overlay for Zelda II Randomizer races and runs." },
   "zelda2-tracker": { "title": "Zelda II Randomizer Tracker", "description": "Item tracker for Zelda II Randomizer." },
-  "ZoraTracker": { "include": true, "title": "ZORATracker", "description": "Tracker for ZORA seeds (zora.gg), with lots of quality-of-life upgrades." }
+  "ZoraTracker": { "include": true, "links": [{ "label": "Releases", "url": "https://github.com/TheGobOne/ZoraTracker/releases" }], "title": "ZORATracker", "description": "Tracker for ZORA seeds (zora.gg), with lots of quality-of-life upgrades." }
 }
