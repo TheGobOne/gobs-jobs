@@ -1,13 +1,14 @@
-/* Brand tokens: placeholder palette until real TGO brand values are supplied. Edit here only. */
+/* Brand tokens (teal on near-black, from the stream tools). Edit here only. */
 :root {
-  --bg: #0e0e14;
-  --surface: #1a1a26;
-  --text: #ececf4;
-  --muted: #9a9ab0;
-  --accent: #9146ff;
-  --accent-text: #fff;
+  --bg: #0a0a0a;
+  --surface: #171717;
+  --text: #e6e6e6;
+  --muted: #9a9a9a;
+  --accent: #2ec4b6;
+  --accent-text: #0a0a0a;
   --live: #ff3b3b;
   --radius: 12px;
+  --font-pixel: "Press Start 2P", ui-monospace, monospace;
   --font: system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 * { box-sizing: border-box; }
@@ -27,3 +28,6 @@ main { max-width: 960px; margin: 0 auto; padding: 1rem; }
 .btn { padding: .4rem .9rem; border-radius: 8px; border: 1px solid var(--muted); color: var(--text); text-decoration: none; font-size: .9rem; }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
 .btn:hover, .twitch:hover { filter: brightness(1.15); }
+h1, .card h2 { font-family: var(--font-pixel); font-weight: 400; line-height: 1.4; }
+.card h2 { font-size: .85rem; }
+h1 { font-size: clamp(1.3rem, 4.5vw, 2.2rem); color: var(--accent); }
