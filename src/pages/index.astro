@@ -29,7 +29,7 @@ const tools = await getTools();
             <h2>{t.title}</h2>
             {t.description && <p>{t.description}</p>}
             <div class="links">
-              {t.live && <a class="btn primary" href={t.live} rel="noopener">Open tool</a>}
+              {t.live && <a class="btn primary" href={t.live} target="_blank" rel="noopener">Open tool</a>}
               <a class="btn" href={t.github} rel="noopener">GitHub</a>
             </div>
           </li>
