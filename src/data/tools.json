@@ -1,6 +1,7 @@
 {
   "_help": "Hand-written overrides keyed by repo name. description/title/live all optional. Set hidden:true to drop a repo; links adds extra buttons.",
   "gobs-jobs": { "hidden": true },
+  "dwrandomizer": { "title": "Dragon Warrior Randomizer (fork)", "description": "My fork of the Dragon Warrior Randomizer for NES, with extra features." },
   "dwr-tracker": { "title": "DWR Tracker", "description": "Item and progress tracker for Dragon Warrior Randomizer runs." },
   "NES-Custom-Music-Tool": { "title": "NES Custom Music Tool", "description": "Help turn NSF files into custom music files you can use with ZORA (Z1R) and Z2R." },
   "fceux-now-playing": { "title": "FCEUX Now Playing", "description": "Shows the name of the custom music playing in ZORA and Z2R randomizer ROMs, on screen in FCEUX and as a text file for OBS." },
